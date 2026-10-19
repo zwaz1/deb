@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mystai.one/sitemap.xml
+Sitemap: https://dubbingai.one/sitemap.xml
