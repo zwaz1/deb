@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Support — Dubbing AI</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Dubbing AI support. Setup guides, troubleshooting, and contact. Free AI voice changer for Windows.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dubbingai.one/support">
+<link rel="icon" type="image/png" href="download.png">
+<style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0B0B12;color:#E4E2F0;font-family:system-ui,sans-serif;line-height:1.8;font-size:16px}.wrap{max-width:740px;margin:0 auto;padding:0 20px}header{padding:20px 0;border-bottom:1px solid #1E1E2E}h1{font-size:32px;font-weight:800;margin:36px 0 8px;color:#fff}h2{font-size:18px;font-weight:700;margin:32px 0 10px;color:#8A7CFF}p{color:#A09DB4;margin-bottom:14px}.card{background:#14141F;border:1px solid #1E1E2E;border-radius:12px;padding:22px 24px;margin-bottom:14px}.card h3{color:#fff;font-size:16px;margin-bottom:8px}.card p{margin:0;font-size:14px}.tag{display:inline-block;background:#1E1E2E;color:#46E2A0;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;margin-bottom:10px}.form-group{margin-bottom:16px}label{display:block;font-size:13px;font-weight:600;color:#8A7CFF;margin-bottom:6px}input,select,textarea{width:100%;background:#14141F;border:1px solid #2A2A3E;border-radius:8px;padding:10px 14px;color:#E4E2F0;font-size:15px;font-family:inherit;outline:none}input:focus,select:focus,textarea:focus{border-color:#8A7CFF}textarea{resize:vertical;min-height:100px}.btn{display:inline-block;background:linear-gradient(135deg,#8A7CFF,#FF6BD5);color:#fff;padding:12px 28px;border-radius:10px;font-weight:700;font-size:15px;border:none;cursor:pointer;text-decoration:none}.notice{background:#14141F;border:1px solid #2A2A3E;border-left:3px solid #FFB86B;border-radius:8px;padding:14px 18px;margin-top:12px;font-size:13px;color:#A09DB4}footer{padding:28px 0;border-top:1px solid #1E1E2E;color:#6A677E;font-size:13px;margin-top:56px}nav a{color:#8A7CFF;text-decoration:none;font-weight:600}</style>
+</head>
+<body>
+<header><div class="wrap" style="display:flex;justify-content:space-between;align-items:center"><a href="/" style="color:#fff;font-weight:800;font-size:17px;text-decoration:none">dubbing<span style="color:#FF6BD5">ai</span></a><nav><a href="/">← Home</a></nav></div></header>
+<main><div class="wrap">
+<h1>Support</h1>
+<p style="font-size:17px;color:#E4E2F0;margin-bottom:32px">Most issues are solved in under 2 minutes. Check the quick fixes below before submitting a ticket.</p>
+
+<h2>Quick fixes</h2>
+
+<div class="card">
+<span class="tag">Most common</span>
+<h3>Dubbing AI not working in game / Discord</h3>
+<p>Go to your game or Discord's audio settings → Input device → select <b style="color:#fff">dubbingai Virtual Mic</b>. The app must be running and a voice must be active first.</p>
+</div>
+
+<div class="card">
+<h3>dubbingai Virtual Mic not showing up</h3>
+<p>Restart Dubbing AI as Administrator. If still missing, uninstall and reinstall — it installs the virtual audio driver on first run.</p>
+</div>
+
+<div class="card">
+<h3>Voice sounds laggy or robotic</h3>
+<p>Lower your buffer size in Settings. Recommended: 128 or 256 samples. Also ensure no other apps are using 100% CPU.</p>
+</div>
+
+<div class="card">
+<h3>App crashes on startup</h3>
+<p>Make sure you're on Windows 10/11 64-bit. Right-click the .exe → Properties → Compatibility → Run as Administrator. Try reinstalling if the issue persists.</p>
+</div>
+
+<h2>Contact support</h2>
+<p>Don't see your issue above? Send us a ticket and we'll get back to you within 24–48 hours.</p>
+
+<form onsubmit="handleSubmit(event)">
+<div class="form-group"><label>Name</label><input type="text" placeholder="Your name" required></div>
+<div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
+<div class="form-group">
+<label>Issue type</label>
+<select>
+<option>Voice not working</option>
+<option>Virtual mic not detected</option>
+<option>App crash / startup issue</option>
+<option>Audio quality / latency</option>
+<option>Other</option>
+</select>
+</div>
+<div class="form-group"><label>Describe your issue</label><textarea placeholder="What happened? What did you try?"></textarea></div>
+<button class="btn" type="submit">Send ticket →</button>
+</form>
+
+<div class="notice" id="confirm" style="display:none">✓ Ticket received. We'll reply to your email within 48 hours.</div>
+</div></main>
+<footer><div class="wrap">© 2026 Dubbing AI · <a href="/" style="color:#8A7CFF">dubbingai.one</a> · <a href="/privacy" style="color:#8A7CFF">Privacy</a> · <a href="/terms" style="color:#8A7CFF">Terms</a></div></footer>
+<script>function handleSubmit(e){e.preventDefault();e.target.style.display='none';document.getElementById('confirm').style.display='block';}</script>
+</body></html>
