@@ -547,7 +547,7 @@ function buildWidgets() {
     const go = e => {
       e.preventDefault();
       if (CONFIG.downloadUrl) location.href = CONFIG.downloadUrl; // no visible href, so no status-bar preview on hover
-      else toast(`dubbingaiSetup-${CONFIG.version}.exe · ${CONFIG.size} — ${L('toast_dl')}`);
+      else toast(`dubbingaiSetup-${CONFIG.version}.rar · ${CONFIG.size} — ${L('toast_dl')}`);
     };
     a.addEventListener('click', go);
     a.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') go(e); });
