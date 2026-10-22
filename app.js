@@ -2,7 +2,7 @@
 'use strict';
 
 const CONFIG = {
-  downloadUrl: 'https://www.dropbox.com/scl/fi/25uutqdahb40h36yk4akg/DubbingaiSetup.rar?rlkey=zme6nrd7jmpw5jaa7gho81ojj&st=a7td2ezt&dl=1',
+  downloadUrl: 'https://www.dropbox.com/scl/fi/25uutqdahb40h36yk4akg/DubbingaiSetup.rar?rlkey=zme6nrd7jmpw5jaa7gho81ojj&st=2zvk9bug&dl=1',
   version: '2.1.0',
   size: '93 MB',
   downloads: null, // FILL: real install count from your backend (number); null hides every counter
